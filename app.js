@@ -2,7 +2,7 @@
 document.getElementById("btnCalcular").addEventListener("click", () => {
 const base = parseFloat(document.getElementById("base").value);
 const altura = parseFloat(document.getElementById("altura").value);
-const areaInput = parseFloat(document.getElementById("area"));
+const areaInput = document.getElementById("area");
 
 
 //Numeros validos
@@ -17,6 +17,11 @@ Swal.fire("Error", "Valores deben ser positivos", "error");
 return;
 
 }
+
+//Calcular el area
+const area = base * altura;
+areaInput.value = area;
+Swal.fire("Exito","Area calculada exitosamente","success");
 
 });
 
