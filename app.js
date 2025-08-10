@@ -25,3 +25,9 @@ Swal.fire("Exito","Area calculada exitosamente","success");
 
 });
 
+//Funcion de limpiar boton
+document.getElementById("btnLimpiar").addEventListener("click",() =>{
+document.getElementById("base").value = "";
+document.getElementById("altura").value ="";
+document.getElementById("area").value="";
+});
